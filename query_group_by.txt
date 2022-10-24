@@ -1,7 +1,7 @@
-1 - SELECT YEAR(enrolment_date), COUNT(id) FROM students GROUP BY YEAR(enrolment_date);
+1 - SELECT YEAR(enrolment_date) as year, COUNT(id) FROM students GROUP BY year;
 
-2 - SELECT office_number, COUNT(id) AS number_of_teachers 
-    FROM teachers GROUP BY office_number HAVING COUNT(id) > 1;
+2 - SELECT office_number, office_address COUNT(id) AS number_of_teachers 
+    FROM teachers GROUP BY office_number ORDER BY number_of_teachers DESC;
 
 3 - SELECT exam_id, AVG(vote) as average_vote FROM exam_student GROUP BY exam_id HAVING AVG(vote);
 
